@@ -1,0 +1,25 @@
+describe('Amazon_test', () => {
+    it('Add_to_cart', () => {
+      cy.visit('https://www.amazon.in/')
+      cy.get('#nav-link-accountList-nav-line-1').trigger('mouseover').then(()=>{
+        cy.get('.nav-action-inner').eq(0).click({force: true})
+      })
+      cy.get('[type="email"]').type("baluchellam5@gmail.com")
+      cy.wait(4000)
+      cy.get('.a-button-input').click()
+      cy.get('#ap_password').type("baluchellam")
+      cy.get('#signInSubmit').click()
+      cy.wait(4000)
+      cy.get('.hm-icon-label').click()
+      cy.wait(3000)
+      cy.contains('Mobiles, Computers').click()
+      cy.contains('All Mobile Phones').click({force: true})
+      cy.wait(6000)
+      cy.get('#apb-browse-refinements-checkbox_5').select()
+      cy.contains('OnePlus Nord CE4 Lite 5G (Super Silver, 8GB RAM, 128GB Storage)').eq(0).click()
+      cy.get('input[type="checkbox"]').eq(0).check({force: true})
+      cy.get('#a-autoid-1-announce').click()
+      cy.get('#nav-cart-count-container').click()
+
+    })
+  })
