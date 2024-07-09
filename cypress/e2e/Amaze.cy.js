@@ -1,8 +1,8 @@
-import HomePage from "../HomePage";
-import Category from "../Category";
-import Signin from "../SigninPage";
-import HomePage from "../HomePage";
-import Category from "../Category";
+import HomePage from "./HomePage";
+import Category from "./Category";
+import Signin from "./SigninPage";
+import HomePage from "./HomePage";
+import Category from "./Category";
 
 describe('Implementing Page Object Model',()=>{
     let amazonData;
@@ -16,7 +16,6 @@ describe('Implementing Page Object Model',()=>{
         })
     })
     it('Automate Amazon', ()=>{
-        HomePage.V
-        isiting Amazon()
+        HomePage.VisitingAmazon()
     })
 })

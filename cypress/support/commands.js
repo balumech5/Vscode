@@ -21,7 +21,7 @@ cypress.Commands.add("parsexlsx", (inputfile)=>{
     return cy.task('parsexlsx', {filepath:inputfile})
 })
 
-//q
+//
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
